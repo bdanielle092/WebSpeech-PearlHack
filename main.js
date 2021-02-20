@@ -17,21 +17,21 @@ function speak(word) {
 }
 
 // Speak cake and display it on page 
-cake.onclick = function() {
-    speak(cake.innerHTML);
-    placeholder.innerHTML = "My favorite is: " + cake.innerHTML;
+blue.onclick = function () {
+    speak(blue.innerHTML);
+    placeholder.innerHTML = "My favorite is: " + blue.innerHTML;
 }
 
 // Speak pie and display it on page 
-pie.onclick = function() {
-    speak(pie.innerHTML);
-    placeholder.innerHTML = "My favorite is: " + pie.innerHTML;
+pink.onclick = function () {
+    speak(pink.innerHTML);
+    placeholder.innerHTML = "My favorite is: " + pink.innerHTML;
 }
 
 // Speak ice cream and display it on page 
-icecream.onclick = function() {
-    speak(icecream.innerHTML);
-    placeholder.innerHTML = "My favorite is: " + icecream.innerHTML;
+yellow.onclick = function () {
+    speak(yellow.innerHTML);
+    placeholder.innerHTML = "My favorite is: " + yellow.innerHTML;
 }
 
 // Declare recognition object 
@@ -45,12 +45,12 @@ recognition.lang = 'en-US';
 recognition.maxAlternatives = 1;
 
 // Start recognition when you click on the "tell us your favorite" button
-voice.onclick = function() {
+voice.onclick = function () {
     recognition.start();
 }
 
 // When word is recognized, speak it and display it on page
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
     var favorite = event.results[0][0].transcript;
     speak(favorite);
     placeholder.innerHTML = "My favorite is: " + favorite;
